@@ -1,15 +1,24 @@
-<div class="menu section">
+<div
+  (window:scroll)="navigation.scroll()"
+  id="menu"
+  [class.fixed]="navigation.router.url !== '/imprint'"
+  class="menu section"
+>
   <div class="logo">
     <p>
       <b>MA<span>_</span></b>
     </p>
   </div>
   <div class="nav">
-    <a routerLink="/#home" (click)="forceNavigate('home')">Home</a>
-    <a routerLink="/#about" (click)="forceNavigate('about')">About</a>
-    <a routerLink="/#portfolio" (click)="forceNavigate('portfolio')"
+    <a routerLink="/#home" (click)="navigation.forceNavigate('home')">Home</a>
+    <a routerLink="/#about" (click)="navigation.forceNavigate('about')"
+      >About</a
+    >
+    <a routerLink="/#portfolio" (click)="navigation.forceNavigate('portfolio')"
       >Portfolio</a
     >
-    <a routerLink="/#contact" (click)="forceNavigate('contact')">Contact</a>
+    <a routerLink="/#contact" (click)="navigation.forceNavigate('contact')"
+      >Contact</a
+    >
   </div>
 </div>

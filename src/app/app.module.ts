@@ -34,7 +34,7 @@ import { filter } from 'rxjs';
 })
 export class AppModule {
   constructor(router: Router, viewportScroller: ViewportScroller) {
-    viewportScroller.setOffset([0, 50]);
+    viewportScroller.setOffset([0, 0]);
     router.events
       .pipe(filter((e) => e instanceof Scroll))
       .subscribe((e: Scroll) => {

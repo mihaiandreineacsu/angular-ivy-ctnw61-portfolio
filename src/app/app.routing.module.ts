@@ -14,7 +14,7 @@ const config = {
     'reload' /**fix to rescroll to same anchor url after scrolling */,
   scrollPositionRestoration: 'enabled',
   anchorScrolling: 'enabled',
-  scrollOffset: [0, 50],
+  scrollOffset: [0, 0],
 };
 
 @NgModule({

@@ -4,10 +4,14 @@
   justify-content: space-between;
   align-items: flex-end;
 
+  z-index: 999;
+
+  height: 60px;
+}
+
+.fixed {
   position: fixed;
-  top: 0;
   left: 0;
   right: 0;
-
-  z-index: 999;
+  top: 100vh;
 }

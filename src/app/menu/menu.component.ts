@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavigationService } from '../navigation.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,18 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu.component.css'],
 })
 export class MenuComponent implements OnInit {
-  constructor(private router: Router) {}
-
-  forceNavigate(name: string) {
-    this.router
-      .navigate(['/'], { fragment: name })
-      .then((result) => {
-        console.log(result);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }
+  constructor(public navigation: NavigationService) {}
 
   ngOnInit() {}
 }
