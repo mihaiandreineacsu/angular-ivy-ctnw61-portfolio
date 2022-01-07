@@ -11,5 +11,11 @@
       />
     </div>
   </div>
-  <button class="profile-btn">View More</button>
+  <button
+    class="profile-btn"
+    routerLink="/#about"
+    (click)="navigation.forceNavigate('about')"
+  >
+    View More
+  </button>
 </div>

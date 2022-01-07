@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Router, Scroll } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs';
+import { NavigationService } from './navigation.service';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
@@ -31,6 +32,7 @@ import { filter } from 'rxjs';
     ContactComponent,
   ],
   bootstrap: [AppComponent],
+  providers: [NavigationService],
 })
 export class AppModule {
   constructor(router: Router, viewportScroller: ViewportScroller) {

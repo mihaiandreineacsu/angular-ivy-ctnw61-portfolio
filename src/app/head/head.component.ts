@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationService } from '../navigation.service';
 
 @Component({
   selector: 'app-head',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeadComponent implements OnInit {
   introText = 'Hi, My Name is Mihai-Andrei Neacsu. I am a Front-End Developer.';
 
-  constructor() {}
+  constructor(public navigation: NavigationService) {}
 
   ngOnInit() {}
 }
