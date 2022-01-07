@@ -9,17 +9,17 @@ export class PortfolioComponent implements OnInit {
   projects = [
     {
       name: 'El POLLO LOCO',
-      img: '',
+      img: 'https://stackblitz.com/files/angular-ivy-ctnw61/github/crunck78/angular-ivy-ctnw61-portfolio/master/src/profile.png',
       categorie: 'javascript',
     },
     {
       name: 'JOIN',
-      img: '',
+      img: 'https://stackblitz.com/files/angular-ivy-ctnw61/github/crunck78/angular-ivy-ctnw61-portfolio/master/src/profile.png',
       categorie: 'javascript',
     },
     {
       name: 'SIMPLE CRM',
-      img: '',
+      img: 'https://stackblitz.com/files/angular-ivy-ctnw61/github/crunck78/angular-ivy-ctnw61-portfolio/master/src/profile.png',
       categorie: 'angular',
     },
   ];
