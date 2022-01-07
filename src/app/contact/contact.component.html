@@ -1,0 +1,44 @@
+<div id="contact" class="section bg-first">
+  <div class="section-title">CONTACT<span>_</span></div>
+  <div class="section-content">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+      <div>
+        <input
+          type="text"
+          placeholder="What is your Name?*"
+          id="name"
+          required
+          [(ngModel)]="contact.name"
+          name="name"
+          #name="ngModel"
+        />
+      </div>
+      <div>
+        <input
+          type="email"
+          placeholder="What si your Email Address?"
+          [(ngModel)]="contact.email"
+          name="email"
+          #email="ngModel"
+        />
+      </div>
+      <div>
+        <textarea
+          name=""
+          id=""
+          rows="10"
+          placeholder="What would you like to tell me?"
+          required
+          [(ngModel)]="contact.message"
+          name="message"
+          #message="ngModel"
+        ></textarea>
+      </div>
+      <div>
+        <button type="submit" [disabled]="!contactForm.form.valid">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

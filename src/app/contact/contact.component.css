@@ -1,0 +1,21 @@
+form {
+  max-width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+form input,
+textarea {
+  width: 100%;
+}
+
+form textarea {
+  padding: 3px; /*for same width as input fields*/
+  resize: vertical;
+  min-height: 100px;
+  max-height: 200px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}

@@ -1,0 +1,20 @@
+<div id="portfolio" class="section bg-second">
+  <div class="section-title">PORTFOLIO<span>_</span></div>
+  <div class="section-content">
+    <div class="categorie-filter-container">
+      <button (click)="showProjects('all')">All</button>
+      <button (click)="showProjects('javascript')">JAVASCRIPT</button>
+      <button (click)="showProjects('angular')">ANGULAR</button>
+    </div>
+    <div class="projects-container">
+      <div class="project-card" *ngFor="let project of filterdProjects">
+        <img class="project-img" src="project.img" alt="" />
+        <div class="project-overlay">
+          <p>{{ project.name }}</p>
+          <p>{{ project.categorie.toUpperCase() }}</p>
+          <button>View</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

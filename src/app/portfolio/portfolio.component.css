@@ -1,0 +1,46 @@
+.categorie-filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 0;
+  box-shadow: 0px 1px 0px 0px;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card {
+  border: 2px solid black;
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+  position: relative; /*relevant for project-overlay*/
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-overlay {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.project-overlay button {
+  margin-top: auto;
+  cursor: pointer;
+}
