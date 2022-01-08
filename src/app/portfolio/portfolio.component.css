@@ -17,6 +17,7 @@
 
 .project-card {
   border: 2px solid black;
+  border-radius: 6px;
   width: 250px;
   height: 250px;
   margin: 20px;

@@ -2,7 +2,12 @@
   <div class="profile">
     <div class="profile-text">
       <span [innerHTML]="introText"></span>
-      <button>Contact Me</button>
+      <button
+        routerLink="/#contact"
+        (click)="navigation.forceNavigate('contact')"
+      >
+        Contact Me
+      </button>
     </div>
     <div class="profile-picture">
       <img
