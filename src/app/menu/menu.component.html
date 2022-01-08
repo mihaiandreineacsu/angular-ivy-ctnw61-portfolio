@@ -1,15 +1,16 @@
 <div
   (window:scroll)="navigation.scroll()"
+  (window:resize)="navigation.scroll()"
   id="menu"
   [class.fixed]="navigation.router.url !== '/imprint'"
   class="menu section"
 >
-  <div class="logo">
-    <p>
+  <div (click)="toggleNav($event)" class="logo">
+    <p class=".unselectable">
       <b>MA<span>_</span></b>
     </p>
   </div>
-  <div class="nav">
+  <div #nav [class.navOpen]="navOpened" class="nav">
     <a routerLink="/#home" (click)="navigation.forceNavigate('home')">Home</a>
     <a routerLink="/#about" (click)="navigation.forceNavigate('about')"
       >About</a

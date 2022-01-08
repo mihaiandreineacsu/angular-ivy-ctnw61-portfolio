@@ -3,6 +3,8 @@
   align-items: center;
   justify-content: center;
 
+  flex-wrap: wrap;
+
   padding: 10px 0;
   box-shadow: 0px 1px 0px 0px;
 }
@@ -56,4 +58,11 @@
 .project-overlay button {
   margin-top: auto;
   cursor: pointer;
+}
+
+@media (min-width: 1440px) {
+  .project-card {
+    width: 500px;
+    height: 500px;
+  }
 }

@@ -7,7 +7,8 @@ import { NavigationService } from '../navigation.service';
   styleUrls: ['./head.component.css'],
 })
 export class HeadComponent implements OnInit {
-  introText = 'Hi, My Name is Mihai-Andrei Neacsu. I am a Front-End Developer.';
+  introText =
+    'Hi, My Name is Mihai-Andrei Neacsu.<br> I am a Front-End Developer.';
 
   constructor(public navigation: NavigationService) {}
 

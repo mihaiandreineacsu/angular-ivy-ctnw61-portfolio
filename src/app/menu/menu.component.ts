@@ -10,5 +10,12 @@ import { NavigationService } from '../navigation.service';
 export class MenuComponent implements OnInit {
   constructor(public navigation: NavigationService) {}
 
+  navOpened = false;
+
   ngOnInit() {}
+
+  toggleNav(event) {
+    console.log(event);
+    this.navOpened = !this.navOpened;
+  }
 }
