@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portfolio.component.css'],
 })
 export class PortfolioComponent implements OnInit {
+  _visibilityChangeHandler(event: any) {
+    console.log(event);
+  }
   projects = [
     {
       name: 'El POLLO LOCO',
