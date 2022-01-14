@@ -17,11 +17,13 @@ export class NavigationService {
   }
 
   scroll() {
-    if (window.scrollY >= window.innerHeight) {
-      document.getElementById('menu').style.top = '0';
-    } else {
-      document.getElementById('menu').style.top =
-        window.innerHeight - window.scrollY + 'px';
+    if (this.router.url !== '/imprint') {
+      if (window.scrollY >= window.innerHeight) {
+        document.getElementById('menu').style.top = '0';
+      } else {
+        document.getElementById('menu').style.top =
+          window.innerHeight - window.scrollY + 'px';
+      }
     }
   }
 }
