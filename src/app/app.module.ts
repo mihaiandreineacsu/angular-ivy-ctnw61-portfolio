@@ -17,6 +17,7 @@ import { Router, Scroll } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs';
 import { NavigationService } from './navigation.service';
+import { InViewDirective } from './in-view.directive';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
@@ -30,6 +31,7 @@ import { NavigationService } from './navigation.service';
     ImprintComponent,
     MenuComponent,
     ContactComponent,
+    InViewDirective,
   ],
   bootstrap: [AppComponent],
   providers: [NavigationService],
