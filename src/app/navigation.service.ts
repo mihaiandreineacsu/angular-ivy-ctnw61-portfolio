@@ -26,4 +26,8 @@ export class NavigationService {
       }
     }
   }
+
+  _visibilityChangeHandler(event: any) {
+    console.log(event);
+  }
 }

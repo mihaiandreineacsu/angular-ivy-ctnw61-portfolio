@@ -1,4 +1,9 @@
-<div id="home" class="head section">
+<div
+  id="home"
+  appInView
+  (visibilityChange)="navigation._visibilityChangeHandler($event)"
+  class="head section"
+>
   <div class="profile">
     <div class="profile-text">
       <span [innerHTML]="introText"></span>

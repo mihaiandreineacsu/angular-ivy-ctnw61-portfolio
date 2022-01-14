@@ -17,17 +17,13 @@ export class InViewDirective implements AfterViewInit, OnDestroy {
 
   private _observer: IntersectionObserver;
 
-  constructor(private _elementRef: ElementRef) {
-    console.log(this._elementRef);
-    console.log('HALLO');
-  }
+  constructor(private _elementRef: ElementRef) {}
 
   ngOnDestroy(): void {
     this._observer.disconnect();
   }
 
   ngAfterViewInit(): void {
-    console.log('HALLO');
     const options = { root: null, rootMargin: '0px', threshold: 1.0 };
     this._observer = new IntersectionObserver(this._callback, options);
     this._observer.observe(this._elementRef.nativeElement);

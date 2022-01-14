@@ -13,4 +13,6 @@ export class HeadComponent implements OnInit {
   constructor(public navigation: NavigationService) {}
 
   ngOnInit() {}
+
+ 
 }

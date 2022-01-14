@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationService } from '../navigation.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -6,9 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portfolio.component.css'],
 })
 export class PortfolioComponent implements OnInit {
-  _visibilityChangeHandler(event: any) {
-    console.log(event);
-  }
   projects = [
     {
       name: 'El POLLO LOCO',
@@ -39,7 +37,7 @@ export class PortfolioComponent implements OnInit {
     }
   }
 
-  constructor() {}
+  constructor(public navigation: NavigationService) {}
 
   ngOnInit() {}
 }
