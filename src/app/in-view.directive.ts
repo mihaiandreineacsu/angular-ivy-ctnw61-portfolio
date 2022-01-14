@@ -13,7 +13,10 @@ import {
   selector: '[appInView]',
 })
 export class InViewDirective implements AfterViewInit, OnDestroy {
-  @Output() visibilityChange = new EventEmitter<'VISIBLE' | 'HIDDEN'>();
+  @Output() visibilityChange = new EventEmitter<{
+    elem: ElementRef;
+    view: 'VISIBLE' | 'HIDDEN';
+  }>();
 
   private _observer: IntersectionObserver;
 
@@ -31,7 +34,11 @@ export class InViewDirective implements AfterViewInit, OnDestroy {
 
   private _callback = (entries, observer) => {
     entries.forEach((entry) =>
-      this.visibilityChange.emit(entry.isIntersecting ? 'VISIBLE' : 'HIDDEN')
+      this.visibilityChange.emit(
+        entry.isIntersecting
+          ? { elem: this._elementRef, view: 'VISIBLE' }
+          : { elem: this._elementRef, view: 'HIDDEN' }
+      )
     );
   };
 }
