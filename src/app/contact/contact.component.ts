@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { NavigationService } from '../navigation.service';
 
 @Component({
   selector: 'app-contact',
@@ -26,7 +27,7 @@ export class ContactComponent implements OnInit {
       },
     },
   };
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, public navigation: NavigationService) {}
 
   ngOnInit() {}
 

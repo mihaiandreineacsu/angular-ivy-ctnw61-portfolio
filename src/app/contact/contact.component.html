@@ -1,4 +1,9 @@
-<div id="contact" class="section bg-first">
+<div
+  appInView
+  (visibilityChange)="navigation._visibilityChangeHandler($event)"
+  id="contact"
+  class="section bg-first"
+>
   <div class="section-title">CONTACT<span>_</span></div>
   <div class="section-content">
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
