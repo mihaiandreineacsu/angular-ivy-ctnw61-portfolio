@@ -39,9 +39,20 @@ export class InViewDirective implements AfterViewInit, OnDestroy {
     this._observer.observe(this._elementRef.nativeElement);
   }
 
+  /**
+   * Callback Function every time the observed element changes visibility state.
+   */
   private _callback : IntersectionObserverCallback = (entries, observer) => {
-    entries.forEach((entry) => this.visibilityChange.emit());
+    entries.forEach((entry) => this.visibilityChange.emit(this._getVisibilityState(entry)));
   };
+
+  /**
+   * 
+   */
+  _getVisibilityState(entry : IntersectionObserverEntry) : VisibilityState {
+     let result = entry.isIntersecting ? 'VISIBLE' : 'HIDDEN';
+     return {elem: this._elementRef, view: result} as VisibilityState;
+  }
 
   ngOnDestroy(): void {
     this._observer.disconnect();
