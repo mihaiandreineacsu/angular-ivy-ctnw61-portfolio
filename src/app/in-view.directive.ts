@@ -9,22 +9,29 @@ import {
   Output,
 } from '@angular/core';
 
+/**
+ * The view state of the element been observed.
+ */
+declare interface VisibilityState {
+  elem: ElementRef;
+  view: 'VISIBLE' | 'HIDDEN';
+}
+
 @Directive({
   selector: '[appInView]',
 })
 export class InViewDirective implements AfterViewInit, OnDestroy {
-  @Output() visibilityChange = new EventEmitter<{
-    elem: ElementRef;
-    view: 'VISIBLE' | 'HIDDEN';
-  }>();
+  /**
+   * Emited each time @method _callback has been called
+   */
+  @Output() visibilityChange = new EventEmitter<VisibilityState>();
 
+  /**
+   * @see Documentaion https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+   */
   private _observer: IntersectionObserver;
 
   constructor(private _elementRef: ElementRef) {}
-
-  ngOnDestroy(): void {
-    this._observer.disconnect();
-  }
 
   ngAfterViewInit(): void {
     const options = { root: null, rootMargin: '0px', threshold: 1.0 };
@@ -32,13 +39,11 @@ export class InViewDirective implements AfterViewInit, OnDestroy {
     this._observer.observe(this._elementRef.nativeElement);
   }
 
-  private _callback = (entries, observer) => {
-    entries.forEach((entry) =>
-      this.visibilityChange.emit(
-        entry.isIntersecting
-          ? { elem: this._elementRef, view: 'VISIBLE' }
-          : { elem: this._elementRef, view: 'HIDDEN' }
-      )
-    );
+  private _callback : IntersectionObserverCallback = (entries, observer) => {
+    entries.forEach((entry) => this.visibilityChange.emit());
   };
+
+  ngOnDestroy(): void {
+    this._observer.disconnect();
+  }
 }
