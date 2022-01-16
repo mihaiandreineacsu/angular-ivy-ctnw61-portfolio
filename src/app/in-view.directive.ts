@@ -50,6 +50,7 @@ export class InViewDirective implements AfterViewInit, OnDestroy {
   };
 
   /**
+   * Gives back the Visibility State of the element been observed.
    * 
    */
   _getVisibilityState(entry : IntersectionObserverEntry) : VisibilityState {
