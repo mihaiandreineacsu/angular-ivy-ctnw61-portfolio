@@ -16,7 +16,7 @@ export class ContactComponent implements OnInit {
 
   post = {
     endPoint:
-      'https://mihai-andrei-neacsu.developerakademie.com/assets/sendMail.php',
+      '',
 
     body: (payload: any) => JSON.stringify(payload),
 
@@ -33,8 +33,6 @@ export class ContactComponent implements OnInit {
 
   onSubmit(ngForm) {
     if (ngForm.submitted && ngForm.form.valid) {
-      // console.log(ngForm.form.value);
-      // console.log(this.contact);
       this.http
         .post(this.post.endPoint, this.post.body(this.contact))
         .subscribe({
