@@ -27,7 +27,7 @@ export class InViewDirective implements AfterViewInit, OnDestroy {
   @Output() visibilityChange = new EventEmitter<VisibilityState>();
 
   /**
-   * @see Documentaion https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+   * @see Documentation https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
    */
   private _observer: IntersectionObserver;
 
@@ -41,6 +41,9 @@ export class InViewDirective implements AfterViewInit, OnDestroy {
 
   /**
    * Callback Function every time the observed element changes visibility state.
+   * Visibility state depends on the threshold values of the observer
+   * 
+   * @see Documentation https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
    */
   private _callback : IntersectionObserverCallback = (entries, observer) => {
     entries.forEach((entry) => this.visibilityChange.emit(this._getVisibilityState(entry)));
