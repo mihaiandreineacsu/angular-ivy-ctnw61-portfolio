@@ -6,7 +6,14 @@
 >
   <div class="profile">
     <div class="profile-text">
-      <p #text [innerHTML]="introText"></p>
+      <p>
+        <span
+          [style.animation-delay]="getAnimationDelay(i)"
+          [innerHTML]="char == ' ' ? '&nbsp;' : char"
+          class="char"
+          *ngFor="let char of introText; let i = index"
+        ></span>
+      </p>
       <button
         routerLink="/#contact"
         (click)="navigation.forceNavigate('contact')"
