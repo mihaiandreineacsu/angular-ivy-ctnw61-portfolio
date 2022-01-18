@@ -74,6 +74,13 @@ button {
   user-select: none;
 }
 
+.char {
+  font-size: 40px;
+  height: 40px;
+  animation: an 1s ease-out 1 both;
+  display: inline-block;
+}
+
 @media (max-width: 400px) {
   .section {
     padding: 10px 10px;

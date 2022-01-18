@@ -6,7 +6,7 @@
 >
   <div class="profile">
     <div class="profile-text">
-      <span [innerHTML]="introText"></span>
+      <p #text [innerHTML]="introText"></p>
       <button
         routerLink="/#contact"
         (click)="navigation.forceNavigate('contact')"

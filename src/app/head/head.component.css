@@ -23,7 +23,7 @@
   flex-direction: column;
 }
 
-.profile-text span {
+.profile-text p {
   color: white;
 
   font-size: larger;
