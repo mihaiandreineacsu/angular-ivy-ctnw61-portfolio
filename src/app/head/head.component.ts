@@ -17,13 +17,10 @@ export class HeadComponent implements OnInit, AfterViewInit {
   newDom = '';
   animationDelay = 6;
 
-  introText =
-    'Hi, My Name is Mihai-Andrei Neacsu.<br> I am a Front-End Developer.';
+  introText = 'Hi, My Name is Mihai-Andrei Neacsu. I am a Front-End Developer.';
 
   constructor(public navigation: NavigationService) {}
-  ngAfterViewInit(): void {}
-
-  ngOnInit() {
+  ngAfterViewInit(): void {
     for (let i = 0; i < this.introText.length; i++) {
       this.newDom +=
         '<span class="char">' +
@@ -39,4 +36,6 @@ export class HeadComponent implements OnInit, AfterViewInit {
         this.animationDelay * i + 'ms';
     }
   }
+
+  ngOnInit() {}
 }
