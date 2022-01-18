@@ -75,7 +75,7 @@ button {
 }
 
 .char {
-  font-size: 40px;
+  font-size: 20px;
   height: 40px;
   animation: an 1s ease-out 1 both;
   display: inline-block;
