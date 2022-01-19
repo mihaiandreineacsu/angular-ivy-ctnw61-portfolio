@@ -12,7 +12,7 @@
       <b>MA<span>_</span></b>
     </p>
   </div>
-  <div #nav [class.navOpen]="navOpened" class="nav">
+  <div [class.navOpen]="navOpened" class="nav">
     <a routerLink="/#home" (click)="navigation.forceNavigate('home')">Home</a>
     <a routerLink="/#about" (click)="navigation.forceNavigate('about')"
       >About</a
