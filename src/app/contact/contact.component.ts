@@ -15,8 +15,7 @@ export class ContactComponent implements OnInit {
   };
 
   post = {
-    endPoint:
-      '',
+    endPoint: '', // Ex. www.my-domain/sendMail.php
 
     body: (payload: any) => JSON.stringify(payload),
 

@@ -17,7 +17,7 @@ switch($_SERVER['REQUEST_METHOD']){
         $name = $params->name;
         $message = $params->message;
 
-        $recipient = 'crunck78@googlemail.com';
+        $recipient = ''; //your email address
         $subject = "Contact From $name <$email>";
         $headers = "From:  noreply@mihai-andrei-neacsu.developerakademie.com";
 

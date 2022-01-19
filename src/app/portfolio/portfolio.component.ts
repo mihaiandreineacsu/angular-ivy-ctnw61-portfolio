@@ -12,16 +12,19 @@ export class PortfolioComponent implements OnInit {
       name: 'El POLLO LOCO',
       img: 'https://stackblitz.com/files/angular-ivy-ctnw61/github/crunck78/angular-ivy-ctnw61-portfolio/master/src/profile.png',
       categorie: 'javascript',
+      url: '',
     },
     {
       name: 'JOIN',
       img: 'https://stackblitz.com/files/angular-ivy-ctnw61/github/crunck78/angular-ivy-ctnw61-portfolio/master/src/profile.png',
       categorie: 'javascript',
+      url: '',
     },
     {
       name: 'SIMPLE CRM',
       img: 'https://stackblitz.com/files/angular-ivy-ctnw61/github/crunck78/angular-ivy-ctnw61-portfolio/master/src/profile.png',
       categorie: 'angular',
+      url: '',
     },
   ];
 
