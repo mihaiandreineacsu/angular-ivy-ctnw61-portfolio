@@ -27,7 +27,7 @@ export class PortfolioComponent implements OnInit {
 
   filterdProjects = this.projects;
 
-  showProjects(categorie) {
+  showProjects(categorie: string) {
     if (categorie !== 'all') {
       this.filterdProjects = this.projects.filter(
         (p) => p.categorie === categorie
