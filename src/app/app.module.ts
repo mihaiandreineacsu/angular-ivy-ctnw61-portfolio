@@ -12,16 +12,39 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { MenuComponent } from './menu/menu.component';
 import { AppRoutingModule } from './app.routing.module';
 import { ContactComponent } from './contact/contact.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Router, Scroll } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs';
 import { NavigationService } from './navigation.service';
 import { InViewDirective } from './in-view.directive';
 import { InViewPortService } from './in-view-port.service';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateModuleConfig } from '@ngx-translate/core/public_api';
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
+
+const config: TranslateModuleConfig = {
+  loader: {
+    provide: TranslateLoader,
+    useFactory: HttpLoaderFactory,
+    deps: [HttpClient],
+  },
+  defaultLanguage: 'en',
+};
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    TranslateModule.forRoot(config),
+  ],
   declarations: [
     AppComponent,
     StartComponent,
