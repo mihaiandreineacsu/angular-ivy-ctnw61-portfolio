@@ -6,11 +6,11 @@
 >
   <div class="profile">
     <div class="profile-text">
-      <p>
+      <p #textIntro>
         <span
           [style.animation-delay]="getAnimationDelay(i)"
           [innerHTML]="char == ' ' ? '&nbsp;' : char"
-          class="char"
+          [class.char]="inviewport.elementInViewport(textIntro)"
           *ngFor="let char of introText; let i = index"
         ></span>
       </p>

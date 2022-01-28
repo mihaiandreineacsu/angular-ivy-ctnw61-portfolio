@@ -18,6 +18,7 @@ import { ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs';
 import { NavigationService } from './navigation.service';
 import { InViewDirective } from './in-view.directive';
+import { InViewPortService } from './in-view-port.service';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
@@ -34,7 +35,7 @@ import { InViewDirective } from './in-view.directive';
     InViewDirective,
   ],
   bootstrap: [AppComponent],
-  providers: [NavigationService],
+  providers: [NavigationService, InViewPortService],
 })
 export class AppModule {
   constructor(router: Router, viewportScroller: ViewportScroller) {

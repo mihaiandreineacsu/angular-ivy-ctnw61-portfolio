@@ -5,6 +5,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
+import { InViewPortService } from '../in-view-port.service';
 import { NavigationService } from '../navigation.service';
 
 @Component({
@@ -20,7 +21,10 @@ export class HeadComponent implements OnInit {
     ...'Hi, My Name is Mihai-Andrei Neacsu. I am a Front-End Developer.',
   ];
 
-  constructor(public navigation: NavigationService) {}
+  constructor(
+    public navigation: NavigationService,
+    public inviewport: InViewPortService
+  ) {}
 
   /**
    * @param {number} - index position of letter
