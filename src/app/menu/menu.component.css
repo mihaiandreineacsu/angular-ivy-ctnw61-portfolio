@@ -40,6 +40,10 @@
   }
 }
 
+.active {
+  font-size: 30px;
+}
+
 /* @media (max-width: 320px) {
 }
 

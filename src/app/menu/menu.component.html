@@ -1,4 +1,5 @@
 <div
+
   (window:scroll)="navigation.scroll()"
   (window:resize)="navigation.scroll()"
   id="menu"
@@ -11,40 +12,17 @@
     </p>
   </div>
   <div [class.navOpen]="navOpened" class="nav">
-    <a
-      #homeLink
-      [class.active]="inviewport.elementInViewport(homeLink)"
-      routerLink="/#home"
-      (click)="navigation.forceNavigate('home')"
-      >Home</a
-    >
-    <a
-      #aboutLink
-      [class.active]="inviewport.elementInViewport(aboutLink)"
-      routerLink="/#about"
-      (click)="navigation.forceNavigate('about')"
+    <a routerLink="/#home" (click)="navigation.forceNavigate('home')">Home</a>
+    <a routerLink="/#about" (click)="navigation.forceNavigate('about')"
       >About</a
     >
-    <a
-      #portfolioLink
-      [class.active]="inviewport.elementInViewport(portfolioLink)"
-      routerLink="/#portfolio"
-      (click)="navigation.forceNavigate('portfolio')"
+    <a routerLink="/#portfolio" (click)="navigation.forceNavigate('portfolio')"
       >Portfolio</a
     >
-    <a
-      #contactLink
-      [class.active]="inviewport.elementInViewport(contactLink)"
-      routerLink="/#contact"
-      (click)="navigation.forceNavigate('contact')"
+    <a routerLink="/#contact" (click)="navigation.forceNavigate('contact')"
       >Contact</a
     >
 
-    <a
-      #imprintLink
-      [class.active]="inviewport.elementInViewport(imprintLink)"
-      routerLink="/imprint"
-      >Imprint</a
-    >
+    <a routerLink="/imprint">Imprint</a>
   </div>
 </div>
