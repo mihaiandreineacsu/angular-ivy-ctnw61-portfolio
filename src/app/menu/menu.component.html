@@ -11,17 +11,40 @@
     </p>
   </div>
   <div [class.navOpen]="navOpened" class="nav">
-    <a routerLink="/#home" (click)="navigation.forceNavigate('home')">Home</a>
-    <a routerLink="/#about" (click)="navigation.forceNavigate('about')"
+    <a
+      #homeLink
+      [class.active]="inviewport.elementInViewport(homeLink)"
+      routerLink="/#home"
+      (click)="navigation.forceNavigate('home')"
+      >Home</a
+    >
+    <a
+      #aboutLink
+      [class.active]="inviewport.elementInViewport(aboutLink)"
+      routerLink="/#about"
+      (click)="navigation.forceNavigate('about')"
       >About</a
     >
-    <a routerLink="/#portfolio" (click)="navigation.forceNavigate('portfolio')"
+    <a
+      #portfolioLink
+      [class.active]="inviewport.elementInViewport(portfolioLink)"
+      routerLink="/#portfolio"
+      (click)="navigation.forceNavigate('portfolio')"
       >Portfolio</a
     >
-    <a routerLink="/#contact" (click)="navigation.forceNavigate('contact')"
+    <a
+      #contactLink
+      [class.active]="inviewport.elementInViewport(contactLink)"
+      routerLink="/#contact"
+      (click)="navigation.forceNavigate('contact')"
       >Contact</a
     >
 
-    <a routerLink="/imprint">Imprint</a>
+    <a
+      #imprintLink
+      [class.active]="inviewport.elementInViewport(imprintLink)"
+      routerLink="/imprint"
+      >Imprint</a
+    >
   </div>
 </div>
