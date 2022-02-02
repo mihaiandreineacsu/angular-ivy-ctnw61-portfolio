@@ -1,10 +1,7 @@
-<div
-  id="home"
-  class="head section"
->
+<div id="home" class="head section">
   <div class="profile">
     <div class="profile-text">
-      <p #textIntro>
+      <p #textIntro appInView>
         <span
           [style.animation-delay]="getAnimationDelay(i)"
           [innerHTML]="char == ' ' ? '&nbsp;' : char"
