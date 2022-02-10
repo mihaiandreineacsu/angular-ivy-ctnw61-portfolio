@@ -8,17 +8,24 @@ import { NavigationService } from '../navigation.service';
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent implements OnInit {
+  /**
+   * This is bind to ngForm's InputFields in Template File
+   */
   contact = {
-    name: '',
-    email: '',
-    message: '',
+    name: '', //Bind  to InputField name="name"
+    email: '', //Bind to InputField name="email"
+    message: '', //Bind to InputField name="message"
   };
 
+  /**
+   * A post request construct configuration
+   */
   post = {
-    endPoint: '', // Ex. www.my-domain/sendMail.php
-
+    // Where to send the post request Ex. www.my-domain/sendMail.php
+    endPoint: '',
+    // What to send
     body: (payload: any) => JSON.stringify(payload),
-
+    // How to send
     options: {
       headers: {
         'Content-Type': 'text/plain',
