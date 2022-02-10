@@ -8,9 +8,10 @@ switch($_SERVER['REQUEST_METHOD']){
         exit;
     case("POST"): //Send the email;
         header("Access-Control-Allow-Origin: *");
-
+        // Payload is not send to $_POST Variable,
+        // is send to php:input as a text
         $json = file_get_contents('php://input');
-
+        //parse the Payload from text format to Object
         $params = json_decode($json);
 
         $email = $params->email;
