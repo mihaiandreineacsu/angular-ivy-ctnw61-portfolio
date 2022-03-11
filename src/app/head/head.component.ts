@@ -33,5 +33,19 @@ export class HeadComponent implements OnInit {
     return `${10 * index}ms`;
   }
 
+  handleTouchStart(event) {
+    console.log(event.type);
+  }
+  handleTouchMove(event) {
+    console.log(event.type);
+  }
+  handleTouchEnd(event) {
+    console.log(event.type);
+  }
+
+  handleTouchCancel(event) {
+    console.log(event.type);
+  }
+
   ngOnInit() {}
 }
