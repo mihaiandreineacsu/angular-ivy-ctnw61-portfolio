@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationService } from '../navigation.service';
 
 @Component({
@@ -6,8 +6,15 @@ import { NavigationService } from '../navigation.service';
   templateUrl: './imprint.component.html',
   styleUrls: ['./imprint.component.css'],
 })
-export class ImprintComponent implements OnInit {
-  constructor(public navigation: NavigationService) {}
+export class ImprintComponent implements OnInit, OnDestroy {
+  constructor(public navigation: NavigationService) {
+    console.log('IMPRINT CONSTRUCTOR');
+  }
+  ngOnDestroy(): void {
+    console.log('NGONDESTROY IMPRINT');
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log('NGINIT IMPRINT');
+  }
 }
