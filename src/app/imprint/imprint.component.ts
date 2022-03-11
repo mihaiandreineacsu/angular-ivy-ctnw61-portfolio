@@ -6,15 +6,6 @@ import { NavigationService } from '../navigation.service';
   templateUrl: './imprint.component.html',
   styleUrls: ['./imprint.component.css'],
 })
-export class ImprintComponent implements OnInit, OnDestroy {
-  constructor(public navigation: NavigationService) {
-    console.log('IMPRINT CONSTRUCTOR');
-  }
-  ngOnDestroy(): void {
-    console.log('NGONDESTROY IMPRINT');
-  }
-
-  ngOnInit() {
-    console.log('NGINIT IMPRINT');
-  }
+export class ImprintComponent {
+  constructor(public navigation: NavigationService) {}
 }
