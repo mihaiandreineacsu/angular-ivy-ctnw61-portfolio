@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app.routing.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Router, Scroll } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { StartComponent } from './start/start.component';
@@ -10,18 +14,19 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { FooterComponent } from './footer/footer.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { MenuComponent } from './menu/menu.component';
-import { AppRoutingModule } from './app.routing.module';
 import { ContactComponent } from './contact/contact.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Router, Scroll } from '@angular/router';
-import { ViewportScroller } from '@angular/common';
-import { filter } from 'rxjs';
+
 import { NavigationService } from './navigation.service';
 import { InViewDirective } from './in-view.directive';
 import { InViewPortService } from './in-view-port.service';
+
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateModuleConfig } from '@ngx-translate/core/public_api';
+
+// import { PrismModule } from 'ng-prismjs';
+
+import { filter } from 'rxjs';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
