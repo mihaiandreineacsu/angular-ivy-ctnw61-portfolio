@@ -21,8 +21,9 @@ export class ContactComponent implements OnInit {
    * A post request construct configuration
    */
   post = {
-    // Where to send the post request Ex. www.my-domain/sendMail.php
-    endPoint: '',
+    // Where to send the post request Ex. http://my-domain/sendMail.php
+    //or https://my-domain/sendMail.php if you have SSL-Certificate Active
+    endPoint: 'https://mihai-andrei-neacsu.de/sendMail.php',
     // What to send, notice JSON.stringify
     body: (payload: any) => JSON.stringify(payload),
     // How to send, notice Content-Type and responseType
