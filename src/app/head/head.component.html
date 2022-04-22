@@ -1,7 +1,12 @@
 <div id="home" class="head section">
   <div class="profile">
     <div class="profile-text">
-      <p #textIntro appInView>
+      <p
+        [style.border]="'2px solid white'"
+        #textIntro
+        appInView
+        (visibilityChange)="handleViewChange($event)"
+      >
         <span
           [style.animation-delay]="getAnimationDelay(i)"
           [innerHTML]="char == ' ' ? '&nbsp;' : char"

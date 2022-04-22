@@ -47,5 +47,9 @@ export class HeadComponent implements OnInit {
     console.log(event.type);
   }
 
+  handleViewChange(event) {
+    console.log(event);
+  }
+
   ngOnInit() {}
 }

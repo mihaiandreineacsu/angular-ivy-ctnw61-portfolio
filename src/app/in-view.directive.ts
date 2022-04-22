@@ -34,7 +34,7 @@ export class InViewDirective implements AfterViewInit, OnDestroy {
   constructor(private _elementRef: ElementRef) {}
 
   ngAfterViewInit(): void {
-    const options = { root: null, rootMargin: '0px', threshold: 1.0 };
+    const options = { root: null, rootMargin: '0px', threshold: [1.0] };
     this._observer = new IntersectionObserver(this._callback, options);
     this._observer.observe(this._elementRef.nativeElement);
   }
@@ -50,6 +50,7 @@ export class InViewDirective implements AfterViewInit, OnDestroy {
       this.visibilityChange.emit(this._getVisibilityState(entry))
     );
   };
+  6;
 
   /**
    * Gives back the Visibility State of the element been observed.
