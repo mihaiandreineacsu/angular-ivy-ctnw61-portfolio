@@ -46,8 +46,14 @@ export class ContactComponent implements OnInit {
       this.http
         .post(this.post.endPoint, this.post.body(this.contact))
         .subscribe({
-          next: (response) => console.log(response),
-          error: (error) => console.error(error),
+          next: (response) => {
+            console.log(response);
+            // Here Message was send
+          },
+          error: (error) => {
+            console.error(error);
+            // Here Message was not send!!!!!
+          },
           complete: () => console.info('send post complete'),
         });
     }
