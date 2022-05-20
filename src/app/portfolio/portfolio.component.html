@@ -1,7 +1,4 @@
-<div
-  id="portfolio"
-  class="section bg-second"
->
+<div id="portfolio" class="section bg-second">
   <div class="section-title">PORTFOLIO<span>_</span></div>
   <div class="section-content">
     <div class="categorie-filter-container">
@@ -12,10 +9,11 @@
     <div class="projects-container">
       <div class="project-card" *ngFor="let project of filterdProjects">
         <img class="project-img" [src]="project.img" alt="" />
+
         <div class="project-overlay">
           <p>{{ project.name }}</p>
           <p>{{ project.categorie.toUpperCase() }}</p>
-          <a target="blank" href="project.url">View</a>
+          <a class="project-url" target="blank" href="project.url">View</a>
         </div>
       </div>
     </div>
