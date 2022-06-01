@@ -18,7 +18,7 @@ export class HeadComponent implements OnInit {
    * We need the text as a Character Array for *ngFor to work. ['H', 'i', ...]
    */
   introText = [
-    ...'Hi, My Name is Mihai-Andrei Neacsu. I am a Front-End Developer.',
+    ...'Hi,%My Name is Mihai-Andrei Neacsu.%I am a Front-End Developer.',
   ];
 
   constructor(

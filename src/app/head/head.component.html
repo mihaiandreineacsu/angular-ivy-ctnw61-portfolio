@@ -7,12 +7,17 @@
         appInView
         (visibilityChange)="handleViewChange($event)"
       >
-        <span
-          [style.animation-delay]="getAnimationDelay(i)"
-          [innerHTML]="char == ' ' ? '&nbsp;' : char"
-          [class.char]="inviewport.elementInViewport(textIntro)"
-          *ngFor="let char of introText; let i = index"
-        ></span>
+        <ng-container *ngFor="let char of introText; let i = index">
+          <span
+            *ngIf="char != '%'; else newLine"
+            [style.animation-delay]="getAnimationDelay(i)"
+            [innerHTML]="char == ' ' ? '&nbsp;' : char"
+            [class.char]="inviewport.elementInViewport(textIntro)"
+          ></span>
+          <ng-template #newLine>
+            <br />
+          </ng-template>
+        </ng-container>
       </p>
       <button
         routerLink="/#contact"
