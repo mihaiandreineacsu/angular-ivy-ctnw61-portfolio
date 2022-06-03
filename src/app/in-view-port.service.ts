@@ -26,6 +26,7 @@ export class InViewPortService {
       left + width <= window.pageXOffset + window.innerWidth
     );
   }
+
   /**
    * You could modify this simply to determine if any part of the element is visible in the viewport:
    * Quelle: https://stackoverflow.com/questions/123999/how-can-i-tell-if-a-dom-element-is-visible-in-the-current-viewport

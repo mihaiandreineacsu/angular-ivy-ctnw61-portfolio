@@ -50,7 +50,6 @@ export class InViewDirective implements AfterViewInit, OnDestroy {
       this.visibilityChange.emit(this._getVisibilityState(entry))
     );
   };
-  6;
 
   /**
    * Gives back the Visibility State of the element been observed.
