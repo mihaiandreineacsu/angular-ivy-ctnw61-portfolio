@@ -2,9 +2,24 @@
   <div class="section-title">PORTFOLIO<span>_</span></div>
   <div class="section-content">
     <div class="categorie-filter-container">
-      <button (click)="showProjects('all')">All</button>
-      <button (click)="showProjects('javascript')">JAVASCRIPT</button>
-      <button (click)="showProjects('angular')">ANGULAR</button>
+      <button
+        [class.active]="currentCategory == 'all'"
+        (click)="showProjects('all')"
+      >
+        ALL
+      </button>
+      <button
+        [class.active]="currentCategory == 'javascript'"
+        (click)="showProjects('javascript')"
+      >
+        JAVASCRIPT
+      </button>
+      <button
+        [class.active]="currentCategory == 'angular'"
+        (click)="showProjects('angular')"
+      >
+        ANGULAR
+      </button>
     </div>
     <div class="projects-container">
       <div class="project-card" *ngFor="let project of filterdProjects">

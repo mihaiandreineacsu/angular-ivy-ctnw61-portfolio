@@ -69,6 +69,11 @@
   position: relative;
 }
 
+.active {
+  background-color: black;
+  color: white;
+}
+
 @media (min-width: 1440px) {
   .project-card {
     width: 500px;

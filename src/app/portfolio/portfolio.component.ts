@@ -30,7 +30,9 @@ export class PortfolioComponent implements OnInit {
 
   filterdProjects = this.projects;
 
+  currentCategory = 'all';
   showProjects(categorie: string) {
+    this.currentCategory = categorie;
     if (categorie !== 'all') {
       this.filterdProjects = this.projects.filter(
         (p) => p.categorie === categorie
@@ -39,7 +41,6 @@ export class PortfolioComponent implements OnInit {
       this.filterdProjects = this.projects;
     }
   }
-
   constructor(public navigation: NavigationService) {}
 
   ngOnInit() {}
