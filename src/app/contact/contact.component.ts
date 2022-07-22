@@ -39,7 +39,7 @@ export class ContactComponent implements OnInit {
   ngOnInit() {}
 
   /**
-   * Do not forget to import FormsModule in app.module.ts
+   * Do not forget to import FormsModule and HttpCLientModule in app.module.ts
    */
   onSubmit(ngForm) {
     if (ngForm.submitted && ngForm.form.valid) {
