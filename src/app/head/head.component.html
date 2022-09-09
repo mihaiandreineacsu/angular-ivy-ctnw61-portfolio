@@ -1,12 +1,7 @@
 <div id="home" class="head section">
   <div class="profile">
     <div class="profile-text">
-      <p
-        [style.border]="'2px solid white'"
-        #textIntro
-        appInView
-        (visibilityChange)="handleViewChange($event)"
-      >
+      <p #textIntro appInView (visibilityChange)="handleViewChange($event)">
         <ng-container *ngFor="let char of introText; let i = index">
           <span
             *ngIf="char != '%'; else newLine"
